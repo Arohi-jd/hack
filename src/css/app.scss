@@ -1,0 +1,127 @@
+// app global css in SCSS form
+
+// Add custom fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+// Global styles
+body {
+  font-family: 'Inter', sans-serif;
+  background: $dark-page;
+  color: white;
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Card hover effects
+.q-card {
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+// Button hover effects
+.q-btn {
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $dark-page;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 4px;
+}
+
+// Text colors
+.text-grey-5 {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+// Gradient text
+.gradient-text {
+  background: linear-gradient(45deg, $gradient-start, $gradient-end);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-section {
+  .hero-image {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+// Add to style section
+.platform-btn {
+  width: 100%;
+  height: 48px;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  padding: 8px 16px;
+  
+  &:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .q-icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+}
+
+.new-update {
+  min-height: 300px;
+  
+  .q-card-section {
+    padding: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .new-update-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(73, 69, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
